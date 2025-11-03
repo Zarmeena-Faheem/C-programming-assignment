@@ -1,0 +1,198 @@
+/*
+Ques 1-What do you mean by arrays ? Give one example of an array and how you can declare an array.
+Ans 1- Collection of similar data types stored at contiguous memory locations.
+Code is given below-*/
+# include <stdio.h>
+ int main(){
+     int arr[3]={23,45,78};
+    printf("%d",arr[1]);
+    return 0;
+}
+/*output:-45*/
+
+/*Ques 2- What do you mean by functions? how many types of functions are there  give one example of each type of function
+Ans 2-Function is a block of code that perform particular task . 
+There are two main types of functions:
+1. Library (Built-in) Functions
+These are pre-defined functions provided by C libraries
+example of library functions are: printf(), scanf()
+2. User-defined Functions
+These are functions that you create according to your program’s needs
+types of user defined functions are:1-Function with no parameters and no return value i.e,void display()
+2-Function with no parameters but with return value i.e, int getNumber()*/
+# include <stdio.h>
+void printNum(int n);
+int main(){
+    int n=5;
+    printNum(n);
+    return 0;
+}   
+void printNum(int n){
+    for (int i=0;i<n;i++){
+        printf("%d\n",i);
+    }
+}
+/*output:-
+0
+1
+2
+3
+4*/
+#include <stdio.h>
+int sum(int x, int y);   
+int main() {
+    int a = 5, b = 10;
+    int result;
+    result = sum(a, b);  
+    printf("Sum = %d\n", result);
+    return 0; 
+int sum(int x, int y) {
+    int s = x + y;
+    return s;   
+}
+/*Output:
+ini
+Copy code
+Sum = 15*/
+
+/*Ques-3 What do ypu mean by pointers ?write a code how you can initialize a pointer 
+Ans 3-A variable that stores the memory address of another variable.*/
+# include <stdio.h>
+int main(){
+    int age=22;
+    int *ptr=&age ;
+    int _age= *ptr;
+    printf("%p\n",&age);
+    printf("%p\n",ptr);
+    printf("%p\n",&ptr);
+    printf("%d\n",_age);
+    return 0;
+}
+/*output:-
+0061FF18
+0061FF18
+0061FF14
+22*/
+/*Ques 4-What do you mea by types of array 1D and 2D array?
+Ans 4- code example is give below*/
+//1 D array
+# include <stdio.h>
+ int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    
+     for(int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+/*output:-
+10, 20, 30, 40, 50*/
+//2D array represention
+# include <stdio.h>
+int main(){
+    int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    printf("%d", arr[1][2]);
+}
+/*output:- 6*/
+/*Ques 5-Explain the types of operators in codes
+Ans 5- answer is given in code form:-*/
+    #include <stdio.h>
+
+int main() {
+    int a = 10, b = 3, result;
+
+    printf("===== 1. Arithmetic Operators =====\n");
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);
+    printf("a %% b = %d\n", a % b);
+
+    printf("\n===== 2. Relational Operators =====\n");
+    printf("a == b : %d\n", a == b);
+    printf("a != b : %d\n", a != b);
+    printf("a > b  : %d\n", a > b);
+    printf("a < b  : %d\n", a < b);
+    printf("a >= b : %d\n", a >= b);
+    printf("a <= b : %d\n", a <= b);
+
+    printf("\n===== 3. Logical Operators =====\n");
+    printf("(a > 5 && b < 5) : %d\n", (a > 5 && b < 5));
+    printf("(a > 5 || b > 5) : %d\n", (a > 5 || b > 5));
+    printf("!(a == b) : %d\n", !(a == b));
+
+    printf("\n===== 4. Assignment Operators =====\n");
+    result = a;
+    result += b;
+    printf("result += b : %d\n", result);
+    result -= b;
+    printf("result -= b : %d\n", result);
+    result *= b;
+    printf("result *= b : %d\n", result);
+    result /= b;
+    printf("result /= b : %d\n", result);
+
+    printf("\n===== 5. Increment and Decrement Operators =====\n");
+    printf("a before increment: %d\n", a);
+    a++;
+    printf("After a++: %d\n", a);
+    a--;
+    printf("After a--: %d\n", a);
+
+    printf("\n===== 6. Bitwise Operators =====\n");
+    printf("a & b = %d\n", a & b);
+    printf("a | b = %d\n", a | b);
+    printf("a ^ b = %d\n", a ^ b);
+    printf("~a = %d\n", ~a);
+    printf("a << 1 = %d\n", a << 1);
+    printf("a >> 1 = %d\n", a >> 1);
+
+    printf("\n===== 7. Conditional (Ternary) Operator =====\n");
+    result = (a > b) ? a : b;
+    printf("Greater value = %d\n", result);
+
+    printf("\n===== 8. Special Operator (sizeof) =====\n");
+    printf("sizeof(a) = %lu bytes\n", sizeof(a));
+
+    return 0;
+}
+/*output:-
+1. Arithmetic Operators 
+a + b = 13
+a - b = 7
+a * b = 30
+a / b = 3
+a % b = 1
+
+2. Relational Operators
+a == b : 0
+a != b : 1
+a > b  : 1
+a < b  : 0
+a >= b : 1
+a <= b : 0
+ 3. Logical Operators 
+(a > 5 && b < 5) : 1
+(a > 5 || b > 5) : 1
+!(a == b) : 1
+ 4. Assignment Operators
+result += b : 13
+result -= b : 10
+result *= b : 30
+result /= b : 10
+5. Increment and Decrement Operators 
+a before increment: 10
+After a++: 11
+After a--: 10
+6. Bitwise Operators 
+a & b = 2
+a | b = 11
+a ^ b = 9
+~a = -11
+a << 1 = 20
+a >> 1 = 5
+7. Conditional (Ternary) Operator 
+Greater value = 10
+8. Special Operator (sizeof) 
+sizeof(a) = 4 bytes
+*/
